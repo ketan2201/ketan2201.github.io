@@ -1,0 +1,204 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* Reset some default styles */
+body, h1, h2, h3, p, ul, li {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.5;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 1rem;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+nav {
+  margin-top: 1rem;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  margin-right: 1rem;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+section {
+  padding: 2rem;
+}
+
+#hero {
+  background-color: #f2f2f2;
+  text-align: center;
+  padding: 1rem 0;
+}
+
+#hero h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+#testimonials {
+  background-color: #f9f9f9;
+}
+
+#testimonials h2 {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+#testimonials ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+#testimonials li {
+  max-width: 300px;
+  margin: 1rem;
+  padding: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* #benefits h2 {
+
+} */
+
+#benefits ul {
+  list-style: disc;
+  padding-left: 2rem;
+}
+
+#map {
+  text-align: center;
+}
+
+#map h2 {
+  background-color: #f9f9f9;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+#requirements ul {
+  list-style: disc;
+  padding-left: 2rem;
+}
+
+#faqs ul {
+  list-style: none;
+  padding-left: 2rem;
+}
+
+#faqs li {
+  margin-bottom: 1rem;
+}
+
+#apply, #contact {
+  text-align: center;
+}
+
+#apply h2, #contact h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+/* Styles for the Apply Now section */
+#apply {
+  text-align: center;
+  padding: 40px;
+  background-color: #f9f9f9;
+}
+
+#apply h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+#apply p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+#apply button {
+  display: inline-block;
+  padding: 12px 25px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #fff;
+  background-color: #0072d8;
+  border: 2px solid #0072d8;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#apply button:hover {
+  background-color: #005cbf;
+  border-color: #005cbf;
+}
+
+#apply button:focus {
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 114, 216, 0.7);
+}
+
+#apply button:active {
+  transform: translateY(2px);
+}
+
+
+/*slideshow*/
+.slideshow-container {
+  max-width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.slide {
+  display: none;
+  text-align: center;
+  font-size: 30px;
+}
+
+.slide img {
+  width: 50%;
+  height: 26rem;
+}
+
+/* Media queries for responsiveness */
+@media screen and (max-width: 768px) {
+  .slide {
+    padding: 40px;
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 768px){
+  .slide img {
+    width: 100%;
+    height: auto;
+  }
+}

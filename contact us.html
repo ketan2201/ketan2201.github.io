@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+        integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css"
+        integrity="sha384-QYIZto+st3yW+o8+5OHfT6S482Zsvz2WfOzpFSXMF9zqeLcFV0/wlZpMtyFcZALm" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/contact.css">
+    <title>Maestro Healthcare Ltd</title>
+</head>
+
+<body>
+    <nav class="navbar background h-nav-resp">
+        <ul class="nav-list v-class-resp">
+            <div class="logo">
+                <a href="index.html"><img src="img/logo-removebg-preview.png" alt="logo"></a>
+            </div>
+            <li><a href="/"> Home</a></li>
+            <li><a href="/business.html">Business</a></li>
+            <li><a href="/product.html"> Products</a></li>
+            <li><a href="/contact us.html"> Contact us</a></li>
+        </ul>
+        <div class="rightNav v-class-resp">
+            <input type="text" name="search" id="search">
+            <button class="btn btn-sm">Search</button>
+        </div>
+        <div class="burger">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+    </nav>
+    <section class="contact">
+        <div class="content">
+            <h2>Contact Us</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates, possimus.</p>
+        </div>
+        <div class="container1">
+            <div class="contactInfo">
+                <div class="box">
+                    <div class="icon"><i class="fa fa-map-marker" aria-hidden="true"></i></div>
+                    <div class="text">
+                        <h3>Address</h3>
+                        <p>D-41,Kailash Industrial Complex,<br>Vikhroli West,Mumbai,<br>Maharashtra 400079</p>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="icon"><i class="fa fa-phone" aria-hidden="true"></i></div>
+                    <div class="text">
+                        <h3>Phone</h3>
+                        <p>089768 97673</p>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="icon"><i class="fa fa-envelope" aria-hidden="true"></i></div>
+                    <div class="text">
+                        <h3>Email</h3>
+                        <p>coremaestro@gmail.com</p>
+                    </div>
+                </div>
+            </div>
+            <div class="contactForm">
+                <h2>Send Message</h2>
+                <form id="contactForm" action="https://script.google.com/macros/s/AKfycbxAIV6nxk4kx2MxwXP4nfpgWs2pcu2WGSu8jaYNwTs1Gs8ltYLqQoR1IP4IuKOE0c71Sg/exec" method="post">
+                    <div class="inputBox">
+                        <input type="text" name="name" required="required">
+                        <span>Name</span>
+                    </div>
+                    <div class="inputBox">
+                        <input type="email" name="email" required="required">
+                        <span>Email</span>
+                    </div>
+                    <div class="inputBox">
+                        <input type="tel" name="phone" required="required">
+                        <span>Phone</span>
+                    </div>
+                    <div class="inputBox">
+                        <textarea name="message" required="required"></textarea>
+                        <span>Message</span>
+                    </div>
+                    <div class="inputBox">
+                        <input type="submit" name="" value="send">
+                    </div>
+                </form>
+
+                <script>
+                    const form = document.getElementById('contactForm');
+                    
+                    form.addEventListener('submit', (e) => {
+                        e.preventDefault();
+                        fetch(form.action, {
+                            method: 'POST',
+                            body: new FormData(form)
+                        })
+                        .then(response => {
+                            if (response.ok) {
+                                alert('Form submitted successfully!');
+                                form.reset();
+                            } else {
+                                alert('Form submission failed. Please try again later.');
+                            }
+                        })
+                        .catch(error => {
+                            alert('An error occurred while submitting the form. Please try again later.');
+                            console.error('Error submitting form:', error);
+                        });
+                    });
+                </script>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="/about.html">about us</a></li>
+                        <li><a href="/services.html">our services</a></li>
+                        <li><a href="/privacy.html">pricacy policy</a></li>
+                        <li><a href="/product.html">products</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>get help</h4>
+                    <ul>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="/contact us.html">contact us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>online shop</h4>
+                    <div class="shop">
+                        <style>
+                            .green-color {
+                                color: green;
+                            }
+                        </style>
+                        <a href="https://karogya.com/" target="_blank">
+                            <i class='fas fa-store green-color'></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>follow us</h4>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/KarogyaCare" target="_blank"><i
+                                class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://wa.link/rq8lgn" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+    </footer>
+    <section class="secRight">
+        copyright &copy;
+        <script>document.write(new Date().getFullYear())</script> | Maestro Healthcare Ltd. Design & Developed by
+        Maestro.
+    </section>
+
+    <script src="js/resp.js"></script>
+
+</body>
+
+</html>
