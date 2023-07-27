@@ -27,7 +27,7 @@ body {
 
 
 .logo {
-    width: 40%;
+    width: 20%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -306,7 +306,7 @@ ul {
     }
 
     .logo {
-        width: 20%;
+        width: 40%;
         display: flex;
         justify-content: center;
         align-items: center;
