@@ -8,24 +8,18 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
         integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(function () {
+            // Load the shared section into the element with id="shared-section"
+            $('#shared-section').load('shared-section.html');
+        });
+    </script>
     <title>Maestro Healthcare Ltd</title>
 </head>
 
 <body>
-
-    <nav class="navbar background">
-        <ul class="nav-list">
-            <div class="logo"><a href="index.html"><img src="img/logo.png" alt="logo"></a></div>
-            <li><a href="/"> Home</a></li>
-            <li><a href="/business.html"> Business</a></li>
-            <li><a href="/product.html"> Products</a></li>
-            <li><a href="/contact us.html"> Contact us</a></li>
-        </ul>
-        <div class="rightNav">
-            <input type="text" name="search" id="search">
-            <button class="btn btn-sm">Search</button>
-        </div>
-    </nav>
+    <div id="shared-section"></div>
 <section class="min-h">
 
 </section>
@@ -36,7 +30,7 @@
                     <h4>Company</h4>
                     <ul>
                         <li><a href="/about.html">about us</a></li>
-                        <li><a href="services.html">our services</a></li>
+                        <li><a href="/services.html">our services</a></li>
                         <li><a href="/privacy.html">pricacy policy</a></li>
                         <li><a href="/product.html">products</a></li>
                     </ul>

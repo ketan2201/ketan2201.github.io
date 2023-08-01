@@ -10,31 +10,18 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
         integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
     <script defer src="js/script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(function () {
+            // Load the shared section into the element with id="shared-section"
+            $('#shared-section').load('shared-section.html');
+        });
+    </script>
     <title>Maestro Healthcare Ltd</title>
 </head>
 
 <body>
-
-    <nav class="navbar background h-nav-resp">
-        <ul class="nav-list v-class-resp">
-            <div class="logo">
-                <a href="#"><img src="img/logo-removebg-preview.png" alt="logo"></a>
-            </div>
-            <li class="nav_items"><a class="nav_link" href="/"> Home</a></li>
-            <li class="nav_items"><a class="nav_link" href="/business.html"> Business</a></li>
-            <li class="nav_items"><a class="nav_link" href="/product.html"> Products</a></li>
-            <li class="nav_items"><a class="nav_link" href="/contact us.html"> Contact us</a></li>
-        </ul>
-        <div class="rightNav v-class-resp">
-            <input type="text" name="search" id="search">
-            <button class="btn btn-sm">Search</button>
-        </div>
-        <div class="burger">
-            <div class="line"></div>
-            <div class="line"></div>
-            <div class="line"></div>
-        </div>
-    </nav>
+    <div id="shared-section"></div>
     <section class="background firstsection">
         <div class="box-main">
             <div class="firsthalf">
@@ -42,7 +29,7 @@
                 <p class="text-small">Advancing Medicine for a Healthier FutureAdvancing Medicine for a Healthier
                     FutureAdvancing Medicine for a Healthier FutureAdvancing Medicine for a Healthier Future</p>
                 <div class="buttons">
-                    <button class="btn"><a href="/">Learn more</a></button>
+                    <button class="btn"><a href="/about.html">Learn more</a></button>
                     <button class="btn"><a href="/contact us.html">Contact us</a></button>
 
                 </div>

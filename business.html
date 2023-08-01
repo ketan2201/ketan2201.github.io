@@ -12,30 +12,18 @@
     <link rel="stylesheet"
         href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css"
         integrity="sha384-QYIZto+st3yW+o8+5OHfT6S482Zsvz2WfOzpFSXMF9zqeLcFV0/wlZpMtyFcZALm" crossorigin="anonymous">
+     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(function () {
+            // Load the shared section into the element with id="shared-section"
+            $('#shared-section').load('shared-section.html');
+        });
+    </script>
     <title>Maestro Healthcare Ltd</title>
 </head>
 
 <body>
-    <nav class="navbar background h-nav-resp">
-        <ul class="nav-list v-class-resp">
-            <div class="logo">
-                <a href="index.html"><img src="img/logo-removebg-preview.png" alt="logo"></a>
-            </div>
-            <li><a href="/"> Home</a></li>
-            <li><a href="/business.html">Business</a></li>
-            <li><a href="/product.html"> Products</a></li>
-            <li><a href="/contact us.html"> Contact us</a></li>
-        </ul>
-        <div class="rightNav v-class-resp">
-            <input type="text" name="search" id="search">
-            <button class="btn btn-sm">Search</button>
-        </div>
-        <div class="burger">
-            <div class="line"></div>
-            <div class="line"></div>
-            <div class="line"></div>
-        </div>
-    </nav>
+    <div id="shared-section"></div>
     <header>
         <h1>Franchise Opportunities with Your Business Name</h1>
         <!-- <nav>

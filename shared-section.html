@@ -1,0 +1,60 @@
+<link rel="stylesheet" href="css/style.css">
+<nav class="navbar background h-nav-resp">
+    <ul class="nav-list v-class-resp">
+        <div class="logo">
+            <a href="#"><img src="img/logo-removebg-preview.png" alt="logo"></a>
+        </div>
+        <li class="nav_items"><a class="nav_link" href="/"> Home</a></li>
+        <li class="nav_items"><a class="nav_link" href="/business.html"> Business</a></li>
+        <li class="nav_items"><a class="nav_link" href="/product.html"> Products</a></li>
+        <li class="nav_items"><a class="nav_link" href="/contact us.html"> Contact us</a></li>
+    </ul>
+    <div class="rightNav v-class-resp">
+        <input type="text" id="searchInput" list="searchOptions" placeholder="Search...">
+        <button class="btn btn-sm" onclick="search()">Search</button>
+        <datalist id="searchOptions">
+            <option value="home"></option>
+            <option value="business"></option>
+            <option value="products"></option>
+            <option value="contact"></option>
+        </datalist>
+    </div>
+    <div class="burger">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+    </div>
+    <script>
+        function search() {
+            // Get the user's input from the search input
+            const searchQuery = document.getElementById("searchInput").value.trim().toLowerCase();
+
+            // Define the base URL for the redirection
+            const baseUrl = window.location.origin;
+
+            // Process the search query and determine the page to redirect to
+            let pageUrl;
+            switch (searchQuery) {
+                case "home":
+                    pageUrl = "index.html";
+                    break;
+                case "business":
+                    pageUrl = "business.html";
+                    break;
+                case "products":
+                    pageUrl = "product.html";
+                    break;
+                case "contact":
+                    pageUrl = "contact us.html";
+                    break;
+                default:
+                    // Redirect to a default page when the search query doesn't match any option
+                    pageUrl = "not-found.html";
+                    break;
+            }
+
+            // Redirect the user to the determined page
+            window.location.href = `${baseUrl}/${pageUrl}`;
+        }
+    </script>
+    <script src="js/resp.js"></script>
