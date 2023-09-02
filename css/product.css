@@ -206,3 +206,95 @@ body {
     }
 
 }
+
+.wrapper{
+    width: 100%;
+    overflow-x: hidden;
+}
+.wrapper .container{
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 20px;
+}
+.category-filter{
+    margin-top: 40px;
+}
+.title{
+    margin-bottom: 40px;
+}
+.title h1{
+    color: #1b1919;
+    text-align: center;
+    font-weight: 800;
+    font-size: 36px;
+    letter-spacing: 1px;
+}
+.filter-buttons{
+    text-align: center;
+}
+.filter-button:focus {
+    background-color: transparent; /* Remove background color change */
+    color: #007bff; /* Change text color */
+    /* Add any other styling you want for the active button text */
+}
+
+
+.filter-button{
+    background: none;
+    cursor: pointer;
+    border: none;
+    font-family: inherit;
+    text-transform: uppercase;
+    display: inline-block;
+    margin: 10px 30px;
+    font-size: 16px;
+    color: #d3d3d3;
+    font-weight: 600;
+    letter-spacing: 2px;
+    position: relative;
+    -webkit-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+}
+.filter-button::after{
+    content: "";
+    position: absolute;
+    top: 110%;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+            transform: translateX(-50%);
+    height: 2px;
+    width: 0;
+    background-color: #555;
+    -webkit-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out
+}
+.filter-button:hover{
+    color: #555;
+}
+.filter-button:hover::after{
+    width: 100%;
+}
+/* active button */
+.active-button{
+    color: #555;
+}
+.active-button::after{
+    width: 100%;
+}
+/*  */
+
+@media (max-width: 768px) {
+    /* Adjust styles for smaller screens */
+    .filter-buttons {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .filter-button {
+        margin: 5px;
+    }
+}
