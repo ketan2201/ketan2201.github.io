@@ -36,7 +36,7 @@
                 </div>
                 
                 <div class="container2">
-                    <div class="products-container">
+                    <div class="products-container" id="productList">
                         <div class="product" data-name="p-1" data-type="best-seller">
                             <img src="img/setocuf.jpg" alt="">
                             <h3>Setocuf</h3>
@@ -276,6 +276,29 @@
                         </div>
                     </div>
                 </div>
+                <script>
+                    // JavaScript code to sort the product list alphabetically
+                    window.addEventListener('DOMContentLoaded', function () {
+                        const productList = document.getElementById('productList');
+                        const products = Array.from(productList.children);
+                
+                        products.sort((a, b) => {
+                            const nameA = a.querySelector('h3').textContent.toLowerCase();
+                            const nameB = b.querySelector('h3').textContent.toLowerCase();
+                            return nameA.localeCompare(nameB);
+                        });
+                
+                        // Clear the existing list
+                        while (productList.firstChild) {
+                            productList.removeChild(productList.firstChild);
+                        }
+                
+                        // Append the sorted list items back to the list
+                        products.forEach((product) => {
+                            productList.appendChild(product);
+                        });
+                    });
+                </script>
                 <div class="products-preview">
                     <div class="preview" data-target="p-1" data-type="best-seller">
                         <img src="img/setocuf.jpg" alt="">
